@@ -20,19 +20,19 @@ int main(int argc, const char * argv[])
 {
     unsigned int a, b=0;
     if ((scanf("%d", &a) == 1)) {
-        printf("a: "); printbinary(a);  //Для
-        printf("b: "); printbinary(b);  //    отладки.
+        printf("a: "); printbinary(a);
+        printf("b: "); printbinary(b);
                for (int i = 0; i < ((sizeof(a)*CHAR_BIT)-1); i++){
                    b = b + a%2; a >>= 1; b <<= 1;
-                   printf("a: "); printbinary(a);   //Для
-                   printf("b: "); printbinary(b);   //    отладки.
+                   printf("a: "); printbinary(a);
+                   printf("b: "); printbinary(b);
                }
     }
     a=b;
     printf("Ответ: %u ", a); printbinary(a);
     return 0;
 }
-               
+
 // Вспомогательная функция, используется для отладки.
 // Печатает двоичный код числа в обратном порядке, т.е. для 5: 10100000.
 int printbinary(unsigned int a){
@@ -42,3 +42,4 @@ int printbinary(unsigned int a){
     printf("\n");
     return 0;
 }
+
